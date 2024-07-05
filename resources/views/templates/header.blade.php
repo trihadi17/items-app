@@ -5,7 +5,7 @@
 
             <!-- Logo container-->
             <div class="logo">
-                <a href="" class="logo">
+                <a href="{{ route('dashboard') }}" class="logo">
                     <img src="/assets/images/logo-sm.png" alt="" height="26" class="logo-small">
                     <img src="/assets/images/logo.png" alt="" height="24" class="logo-large">
                 </a>
@@ -48,7 +48,7 @@
                             document.getElementById('logout-form').submit();" class="dropdown-item notify-item">
                                 <i class="ti-power-off m-r-5"></i> Sign Out
                             </a>
-                            <form action="" id="logout-form" method="POST" class="d-none">
+                            <form action="{{ route('logout') }}" id="logout-form" method="POST" class="d-none">
                                 @csrf
                             </form>
                         </div>
