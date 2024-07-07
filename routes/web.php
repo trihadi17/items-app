@@ -68,6 +68,12 @@ Route::group(['middleware' => 'auth'], function (){
 
     /* Gudang */
     Route::get('/gudang', [GudangController::class,'index'])->name('gudang');
+    Route::get('/gudang/create', [GudangController::class,'create'])->name('gudang-create');
+    Route::post('/gudang/store', [GudangController::class,'store'])->name('gudang-store');
+    Route::get('/gudang/show/{id}', [GudangController::class,'show'])->name('gudang-show');
+    Route::get('/gudang/edit/{id}', [GudangController::class,'edit'])->name('gudang-edit');
+    Route::post('/gudang/update/{id}', [GudangController::class,'update'])->name('gudang-update');
+    Route::delete('/gudang/delete/{id}', [GudangController::class,'destroy'])->name('gudang-delete');
 
 
     /* Barang Masuk */
