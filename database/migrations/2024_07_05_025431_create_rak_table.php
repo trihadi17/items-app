@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('rak', function (Blueprint $table) {
             $table->id();
-            $table->string('rak',15);
+            $table->string('rak',50);
             $table->text('deskripsi');
             $table->timestamps();
         });

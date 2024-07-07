@@ -48,6 +48,12 @@ Route::group(['middleware' => 'auth'], function (){
 
     /* Klasifikasi */
     Route::get('/klasifikasi', [KlasifikasiController::class,'index'])->name('klasifikasi');
+    Route::get('/klasifikasi/create', [KlasifikasiController::class,'create'])->name('klasifikasi-create');
+    Route::post('/klasifikasi/store', [KlasifikasiController::class,'store'])->name('klasifikasi-store');
+    Route::get('/klasifikasi/show/{id}', [KlasifikasiController::class,'show'])->name('klasifikasi-show');
+    Route::get('/klasifikasi/edit/{id}', [KlasifikasiController::class,'edit'])->name('klasifikasi-edit');
+    Route::post('/klasifikasi/update/{id}', [KlasifikasiController::class,'update'])->name('klasifikasi-update');
+    Route::delete('/klasifikasi/delete/{id}', [KlasifikasiController::class,'destroy'])->name('klasifikasi-delete');
 
 
     /* Rak */
