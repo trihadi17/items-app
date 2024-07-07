@@ -71,31 +71,31 @@
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu">
                     <li class="has-submenu">
-                        <a href=""><i class="mdi mdi-view-dashboard"></i> <span> Dashboard </span> </a>
+                        <a href="{{ route('dashboard') }}"><i class="mdi mdi-view-dashboard"></i> <span> Dashboard </span> </a>
                     </li>
                     <li class="has-submenu">
-                        <a href=""><i class="mdi mdi-cart"></i> <span> Barang </span> </a>
+                        <a href="{{ route('barang') }}"><i class="mdi mdi-archive"></i> <span> Barang </span> </a>
                     </li>
                     <li class="has-submenu">
-                        <a href=""><i class="mdi mdi-account-card-details"></i> <span> Satuan </span> </a>
+                        <a href="{{ route('satuan') }}"><i class="mdi mdi-scale"></i> <span> Satuan </span> </a>
                     </li>
                     <li class="has-submenu">
-                        <a href=""><i class="mdi mdi-account-card-details"></i> <span> Klasifikasi </span> </a>
+                        <a href="{{ route('klasifikasi') }}"><i class="mdi mdi-format-list-bulleted-type"></i> <span> Klasifikasi </span> </a>
                     </li>
                     <li class="has-submenu">
-                        <a href=""><i class="mdi mdi-account-card-details"></i> <span> Rak </span> </a>
+                        <a href="{{ route('rak') }}"><i class="mdi mdi-view-quilt"></i> <span> Rak </span> </a>
                     </li>
                     <li class="has-submenu">
-                        <a href=""><i class="mdi mdi-account-card-details"></i> <span> Gudang </span> </a>
+                        <a href="{{ route('gudang') }}"><i class="mdi mdi-garage"></i> <span> Gudang </span> </a>
                     </li>
                     <li class="has-submenu">
-                        <a href=""><i class="mdi mdi-account-card-details"></i> <span> Barang Masuk </span> </a>
+                        <a href="{{ route('barang-masuk') }}"><i class="mdi mdi-file-import"></i> <span> Barang Masuk </span> </a>
                     </li>
                     <li class="has-submenu">
-                        <a href=""><i class="mdi mdi-account-card-details"></i> <span> Barang Keluar </span> </a>
+                        <a href="{{ route('barang-keluar') }}"><i class="mdi mdi-file-export"></i> <span> Barang Keluar </span> </a>
                     </li>
                     <li class="has-submenu">
-                        <a href=""><i class="mdi mdi-account-card-details"></i> <span> History </span> </a>
+                        <a href="{{ route('history') }}"><i class="mdi mdi-history"></i> <span> History </span> </a>
                     </li>
                 </ul>
                 <!-- End navigation menu -->
