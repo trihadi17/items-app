@@ -58,6 +58,12 @@ Route::group(['middleware' => 'auth'], function (){
 
     /* Rak */
     Route::get('/rak', [RakController::class,'index'])->name('rak');
+    Route::get('/rak/create', [RakController::class,'create'])->name('rak-create');
+    Route::post('/rak/store', [RakController::class,'store'])->name('rak-store');
+    Route::get('/rak/show/{id}', [RakController::class,'show'])->name('rak-show');
+    Route::get('/rak/edit/{id}', [RakController::class,'edit'])->name('rak-edit');
+    Route::post('/rak/update/{id}', [RakController::class,'update'])->name('rak-update');
+    Route::delete('/rak/delete/{id}', [RakController::class,'destroy'])->name('rak-delete');
 
 
     /* Gudang */

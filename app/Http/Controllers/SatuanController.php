@@ -69,7 +69,7 @@ class SatuanController extends Controller
 
             DB::commit();
 
-            return redirect('satuan');
+            return redirect('/satuan');
         } catch (\Throwable $e) {
             DB::rollBack();
 

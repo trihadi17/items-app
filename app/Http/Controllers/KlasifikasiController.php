@@ -69,7 +69,7 @@ class KlasifikasiController extends Controller
 
             DB::commit();
 
-            return redirect('klasifikasi');
+            return redirect('/klasifikasi');
         } catch (\Throwable $e) {
             DB::rollBack();
 

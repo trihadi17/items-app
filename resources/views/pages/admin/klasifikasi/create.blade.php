@@ -11,7 +11,7 @@
                     <label for="klasifikasiInput">Klasifikasi</label>
                     <input type="text" name="klasifikasi" id="klasifikasiInput"
                         class="form-control @error('klasifikasi') is-invalid @enderror"
-                        placeholder="Masukkan klasifikasi" value="{{ old('klasifikasi') }}">
+                        placeholder="Masukkan Klasifikasi" value="{{ old('klasifikasi') }}">
                     {{-- Error message --}}
                     @error('klasifikasi')
                     <div class="invalid-feedback">
