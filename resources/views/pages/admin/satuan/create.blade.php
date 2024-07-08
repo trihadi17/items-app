@@ -5,6 +5,31 @@
 <div class="row">
     <div class="col-12">
         <div class="card-box">
+
+            {{-- Message Success --}}
+            @if (session('success'))
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                </div>
+            </div>
+            @endif
+            {{-- End --}}
+
+            {{-- Message Error --}}
+            @if (session('error'))
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                    </div>
+                </div>
+            </div>
+            @endif
+            {{-- End --}}
+
             <form role="form" method="POST" action="{{ route('satuan-store') }}">
                 @csrf
                 <div class="form-group">

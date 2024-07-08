@@ -36,12 +36,12 @@ class RakController extends Controller
             // commit semua proses, ketika operasi telah selesai
             DB::commit();
 
-            return redirect('/rak');
+            return redirect('/rak/create')->with('success', 'Data berhasil ditambahkan');
         } catch (\Throwable $e) {
             // batalkan semua proses
             DB::rollBack();
 
-            return back();
+            return redirect('/rak/create')->with('error', 'Terjadi kesalahan, silahkan coba lagi');
         }
     }
 
@@ -69,11 +69,11 @@ class RakController extends Controller
 
             DB::commit();
 
-            return redirect('rak');
+            return redirect('rak')->with('success', 'Data berhasil diubah');
         } catch (\Throwable $e) {
             DB::rollBack();
 
-            return back();
+            return back()->with('error', 'Terjadi kesalahan, silahkan coba lagi');
         }
     }
 

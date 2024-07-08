@@ -34,6 +34,9 @@ Route::group(['middleware' => 'auth'], function (){
 
     /* Barang */
     Route::get('/barang', [BarangController::class,'index'])->name('barang');
+    Route::get('/barang/create', [BarangController::class,'create'])->name('barang-create');
+    Route::post('/barang/store', [BarangController::class,'store'])->name('barang-store');
+     Route::get('/barang/edit/{id}', [BarangController::class,'edit'])->name('barang-edit');
 
 
     /* Satuan */

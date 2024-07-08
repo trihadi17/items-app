@@ -36,12 +36,12 @@ class GudangController extends Controller
             // commit semua proses, ketika operasi telah selesai
             DB::commit();
 
-            return redirect('/gudang');
+            return redirect('/gudang/create')->with('success', 'Data berhasil ditambahkan');
         } catch (\Throwable $e) {
             // batalkan semua proses
             DB::rollBack();
 
-            return back();
+            return redirect('/gudang/create')->with('error', 'Terjadi kesalahan, silahkan coba lagi');
         }
     }
 
@@ -69,11 +69,11 @@ class GudangController extends Controller
 
             DB::commit();
 
-            return redirect('/gudang');
+            return redirect('/gudang')->with('success', 'Data berhasil diubah');
         } catch (\Throwable $e) {
             DB::rollBack();
 
-            return back();
+            return back()->with('error', 'Terjadi kesalahan, silahkan coba lagi');
         }
     }
 

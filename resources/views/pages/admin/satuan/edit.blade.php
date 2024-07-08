@@ -11,7 +11,7 @@
                     <label for="satuanInput">Satuan</label>
                     <input type="text" name="satuan" id="satuanInput"
                         class="form-control @error('satuan') is-invalid @enderror" placeholder="Masukkan Satuan"
-                        value="{{ $satuan->satuan }}">
+                        value="{{ old('satuan', $satuan->satuan)  }}">
                     {{-- Error message --}}
                     @error('satuan')
                     <div class="invalid-feedback">
@@ -23,7 +23,10 @@
                 <div class="form-group">
                     <label for="deskripsiInput">Deskripsi</label>
                     <textarea name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror" rows="5"
-                        placeholder="Masukkan Deskripsi">{{ $satuan->deskripsi }}</textarea>
+                        {{-- Kenapa harus menggunakan old juga? karena ketika sudah dirubah dan ada input field yang
+                        kosong maka dia mmenyimpan data yang telah diubah bukan lagi menyimpan data dari database, itu
+                        sangat penting. Karna tidak perlu lagi ketik ulang utk ngerubah --}}
+                        placeholder="Masukkan Deskripsi">{{ old('deskripsi' ,$satuan->deskripsi)  }}</textarea>
                     {{-- Error message --}}
                     @error('deskripsi')
                     <div class="invalid-feedback">
