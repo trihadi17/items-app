@@ -36,7 +36,10 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/barang', [BarangController::class,'index'])->name('barang');
     Route::get('/barang/create', [BarangController::class,'create'])->name('barang-create');
     Route::post('/barang/store', [BarangController::class,'store'])->name('barang-store');
-     Route::get('/barang/edit/{id}', [BarangController::class,'edit'])->name('barang-edit');
+    Route::get('/barang/show/{id}', [BarangController::class,'show'])->name('barang-show');
+    Route::get('/barang/edit/{id}', [BarangController::class,'edit'])->name('barang-edit');
+    Route::patch('/barang/update/{id}', [BarangController::class,'update'])->name('barang-update');
+    Route::delete('/barang/delete/{id}', [BarangController::class,'destroy'])->name('barang-delete');
 
 
     /* Satuan */
@@ -45,7 +48,7 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/satuan/store', [SatuanController::class,'store'])->name('satuan-store');
     Route::get('/satuan/show/{id}', [SatuanController::class,'show'])->name('satuan-show');
     Route::get('/satuan/edit/{id}', [SatuanController::class,'edit'])->name('satuan-edit');
-    Route::post('/satuan/update/{id}', [SatuanController::class,'update'])->name('satuan-update');
+    Route::patch('/satuan/update/{id}', [SatuanController::class,'update'])->name('satuan-update');
     Route::delete('/satuan/delete/{id}', [SatuanController::class,'destroy'])->name('satuan-delete');
 
 
@@ -55,7 +58,7 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/klasifikasi/store', [KlasifikasiController::class,'store'])->name('klasifikasi-store');
     Route::get('/klasifikasi/show/{id}', [KlasifikasiController::class,'show'])->name('klasifikasi-show');
     Route::get('/klasifikasi/edit/{id}', [KlasifikasiController::class,'edit'])->name('klasifikasi-edit');
-    Route::post('/klasifikasi/update/{id}', [KlasifikasiController::class,'update'])->name('klasifikasi-update');
+    Route::patch('/klasifikasi/update/{id}', [KlasifikasiController::class,'update'])->name('klasifikasi-update');
     Route::delete('/klasifikasi/delete/{id}', [KlasifikasiController::class,'destroy'])->name('klasifikasi-delete');
 
 
@@ -65,7 +68,7 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/rak/store', [RakController::class,'store'])->name('rak-store');
     Route::get('/rak/show/{id}', [RakController::class,'show'])->name('rak-show');
     Route::get('/rak/edit/{id}', [RakController::class,'edit'])->name('rak-edit');
-    Route::post('/rak/update/{id}', [RakController::class,'update'])->name('rak-update');
+    Route::patch('/rak/update/{id}', [RakController::class,'update'])->name('rak-update');
     Route::delete('/rak/delete/{id}', [RakController::class,'destroy'])->name('rak-delete');
 
 
@@ -75,7 +78,7 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/gudang/store', [GudangController::class,'store'])->name('gudang-store');
     Route::get('/gudang/show/{id}', [GudangController::class,'show'])->name('gudang-show');
     Route::get('/gudang/edit/{id}', [GudangController::class,'edit'])->name('gudang-edit');
-    Route::post('/gudang/update/{id}', [GudangController::class,'update'])->name('gudang-update');
+    Route::patch('/gudang/update/{id}', [GudangController::class,'update'])->name('gudang-update');
     Route::delete('/gudang/delete/{id}', [GudangController::class,'destroy'])->name('gudang-delete');
 
 

@@ -7,6 +7,7 @@
         <div class="card-box">
             <form role="form" method="POST" action="{{ route('rak-update', $rak->id) }}">
                 @csrf
+                @method('PATCH')
                 <div class="form-group">
                     <label for="rakInput">Rak</label>
                     <input type="text" name="rak" id="rakInput" class="form-control @error('rak') is-invalid @enderror"

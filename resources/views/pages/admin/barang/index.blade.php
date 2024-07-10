@@ -57,13 +57,15 @@
                         <td>{{ $barang->gudang->gudang }}</td>
                         <td>{{ $barang->stok }}</td>
                         <td>
+
                             <div class="btn-group">
-                                <a href="" type="button" class="btn btn-primary waves-effect btn-sm"><i
-                                        class="fa fa-eye"></i></a>
+                                <a href="{{ route('barang-show',$barang->id)}}" type="button"
+                                    class="btn btn-primary waves-effect btn-sm"><i class="fa fa-eye"></i></a>
                                 <a href="{{ route('barang-edit', $barang->id) }}" type="button"
                                     class="btn btn-warning waves-effect btn-sm"><i class="fa fa-pencil"></i></a>
                                 <button type="submit" class="btn btn-danger waves-effect btn-sm" data-toggle="modal"
-                                    data-target="#deleteModal" data-id=""><i class="fa fa-trash-o"></i></button>
+                                    data-target="#deleteModal" data-id="{{ $barang->id }}"><i
+                                        class="fa fa-trash-o"></i></button>
 
                             </div>
                         </td>

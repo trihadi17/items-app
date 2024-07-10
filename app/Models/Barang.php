@@ -38,4 +38,8 @@ class Barang extends Model
     public function gudang(){
         return $this->hasOne(Gudang::class, 'id', 'kd_gudang');
     }
+
+    public function user(){
+        return $this->hasOne(User::class,'user_id','user_id');
+    }
 }

@@ -7,6 +7,7 @@
         <div class="card-box">
             <form role="form" method="POST" action="{{ route('gudang-update', $gudang->id) }}">
                 @csrf
+                @method('PATCH')
                 <div class="form-group">
                     <label for="gudangInput">Gudang</label>
                     <input type="text" name="gudang" id="gudangInput"
