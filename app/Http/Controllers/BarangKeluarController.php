@@ -38,7 +38,7 @@ class BarangKeluarController extends Controller
 
             // proses
             $barangKeluar = BarangKeluar::create([
-                'kd_transaksi' => 'TSKK' . mt_rand(0,100) . $request->kd_barang,
+                'kd_transaksi' => 'TLK' . mt_rand(0,100) . $request->kd_barang,
                 'tanggal' => now(),
                 'kd_barang' => $request->kd_barang,
                 'quantity' => $request->quantity,
