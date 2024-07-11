@@ -49,7 +49,7 @@
                     <tr>
                         <td>{{ $barangKeluar->kd_transaksi }}</td>
                         <td>
-                            <p>{{ date('d F Y', strtotime($barangKeluar->barang->created_at))}}
+                            <p>{{ date('d F Y', strtotime($barangKeluar->created_at))}}
                                 <small class="text-muted">{{ date('H:i:s', strtotime($barangKeluar->created_at))
                                     }}</small>
                             </p>
