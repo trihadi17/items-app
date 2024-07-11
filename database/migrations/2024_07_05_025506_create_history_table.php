@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('kd_barang');
             $table->integer('quantity');
-            $table->dateTime('tanggal');
             $table->string('status', 15);
             $table->integer('user_id');
             $table->timestamps();

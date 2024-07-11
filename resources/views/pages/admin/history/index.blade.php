@@ -24,8 +24,8 @@
                         <td>{{ $history->barang->barang }}</td>
                         <td>{{ $history->quantity }}</td>
                         <td>
-                            <p>{{ date('d F Y', strtotime($history->tanggal))}}
-                                <small class="text-muted">{{ date('H:i:s', strtotime($history->tanggal))
+                            <p>{{ date('d F Y', strtotime($history->created_at))}}
+                                <small class="text-muted">{{ date('H:i:s', strtotime($history->created_at))
                                     }}</small>
                             </p>
                         </td>

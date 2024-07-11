@@ -38,8 +38,7 @@ class BarangKeluarController extends Controller
 
             // proses
             $barangKeluar = BarangKeluar::create([
-                'kd_transaksi' => 'TLK' . mt_rand(0,100) . $request->kd_barang,
-                'tanggal' => now(),
+                'kd_transaksi' => 'TKLR' . mt_rand(0,100) . $request->kd_barang,
                 'kd_barang' => $request->kd_barang,
                 'quantity' => $request->quantity,
                 'user_id' => Auth::user()->user_id,
@@ -54,7 +53,6 @@ class BarangKeluarController extends Controller
             $history = History::create([
                 'kd_barang' => $request->kd_barang,
                 'quantity' => $request->quantity,
-                'tanggal' => now(),
                 'status' => 'Barang Keluar',
                 'user_id' => Auth::user()->user_id,
             ]);

@@ -23,8 +23,8 @@
                         style="width: 48px; height: 48px;">
                     <div class="media-body">
                         <h4 class="media-heading mb-0 mt-0">{{ $barangKeluar->user->nama }}</h4>
-                        <p>{{ date('d F Y', strtotime($barangKeluar->tanggal))}}
-                            <small class="text-muted">{{ date('H:i:s', strtotime($barangKeluar->tanggal))
+                        <p>{{ date('d F Y', strtotime($barangKeluar->created_at))}}
+                            <small class="text-muted">{{ date('H:i:s', strtotime($barangKeluar->created_at))
                                 }}</small>
                         </p>
                     </div>
