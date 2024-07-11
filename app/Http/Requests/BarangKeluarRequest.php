@@ -22,8 +22,6 @@ class BarangKeluarRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'kd_transaksi' => 'required|string',
-            'tanggal' => 'required',
             'kd_barang' => 'required|string',
             'quantity' => 'required|integer',
         ];

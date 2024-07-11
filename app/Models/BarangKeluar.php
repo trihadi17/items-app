@@ -18,4 +18,12 @@ class BarangKeluar extends Model
         'created_at',
         'updated_at'
     ];
+
+    public function barang(){
+        return $this->hasOne(Barang::class, 'kd_barang', 'kd_barang');
+    }
+
+    public function user(){
+        return $this->hasOne(User::class, 'user_id', 'user_id');
+    }
 }

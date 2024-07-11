@@ -24,8 +24,9 @@
                         style="width: 48px; height: 48px;">
                     <div class="media-body">
                         <h4 class="media-heading mb-0 mt-0">{{ $barang->user->nama }}</h4>
-                        <span class="badge badge-primary">{{ date('d F Y H:i:s', strtotime($barang->created_at))
-                            }}</span>
+                        <p>{{ date('d F Y', strtotime($barang->created_at))}}
+                            <small class="text-muted">{{ date('H:i:s', strtotime($barang->created_at)) }}</small>
+                        </p>
                     </div>
                 </div>
             </div>

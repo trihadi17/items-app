@@ -84,10 +84,16 @@ Route::group(['middleware' => 'auth'], function (){
 
     /* Barang Masuk */
     Route::get('/barang-masuk', [BarangMasukController::class,'index'])->name('barang-masuk');
+    Route::get('/barang-masuk/create', [BarangMasukController::class,'create'])->name('barang-masuk-create');
+    Route::post('/barang-masuk/store', [BarangMasukController::class,'store'])->name('barang-masuk-store');
+    Route::get('/barang-masuk/show/{id}', [BarangMasukController::class, 'show'])->name('barang-masuk-show');
 
 
     /* Barang Keluar */
     Route::get('/barang-keluar', [BarangKeluarController::class,'index'])->name('barang-keluar');
+    Route::get('/barang-keluar/create', [BarangKeluarController::class,'create'])->name('barang-keluar-create');
+    Route::post('/barang-keluar/store', [BarangKeluarController::class,'store'])->name('barang-keluar-store');
+    Route::get('/barang-keluar/show/{id}', [BarangKeluarController::class, 'show'])->name('barang-keluar-show');
 
 
     /* History */
