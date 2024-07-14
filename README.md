@@ -14,7 +14,8 @@
   php artisan key:generate
   ```
 - Buat database dengan nama ***itemsapp***
-- Sesuaikan parameter pada file **.env**, seperti berikut:
+- Kemudian Load/Import Dump SQL
+- Setelah itu, buka code pada Vscode. Sesuaikan parameter pada file **.env**, seperti berikut:
   ```
   APP_URL=http://localhost
 
