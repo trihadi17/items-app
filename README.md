@@ -1,5 +1,5 @@
 ### **Panduan Instalasi**
-- Download folder pada github, setelah itu extract
+- Download code pada github, setelah itu extract
 - Buka terminal atau Command Line, kemudian arahkan ke folder ***itemsapp***
 - Jalankan perintah:
   ```
